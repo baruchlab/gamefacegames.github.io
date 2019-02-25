@@ -1,0 +1,17 @@
+{
+  "name": "bernieface",
+  "version": "1.0.0",
+  "description": "",
+  "main": "score.js",
+  "scripts": {
+    "start": "static-server",
+    "deploy": "surge"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "static-server": "^2.2.1",
+    "tachyons": "^4.10.0"
+  }
+}
