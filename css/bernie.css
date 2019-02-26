@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'Cabin';
+  src: url('css/fonts/Cabin-Regular.ttf')  format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cabin';
+  src: url('css/fonts/Cabin-Bold.ttf')  format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cabin';
+  src: url('css/fonts/Cabin-BoldItalic.ttf')  format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Cabin';
+  src: url('css/fonts/Cabin-Italic.ttf')  format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Cabin';
+  src: url('css/fonts/Cabin-MediumItalic.ttf')  format('truetype');
+  font-weight: medium;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Cabin';
+  src: url('css/fonts/Cabin-Medium.ttf')  format('truetype');
+  font-weight: medium;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cabin';
+  src: url('css/fonts/Cabin-SemiBold.ttf')  format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Cabin';
+  src: url('css/fonts/Cabin-SemiBoldItalic.ttf')  format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+.cabin {
+  font-family: Cabin, sans-serif;
+}
+.bernie-blue { color: #0070CC; }
+.bg-bernie-blue { background-color: #0070CC; }
+
