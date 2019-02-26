@@ -1,17 +1,15 @@
 {
   "name": "bernieface",
   "version": "1.0.0",
-  "description": "",
+  "description": "Put On Your Bernie Face!",
   "main": "score.js",
   "scripts": {
-    "start": "static-server",
-    "deploy": "surge"
+    "start": "static-server"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
-    "static-server": "^2.2.1",
-    "tachyons": "^4.10.0"
+    "static-server": "^2.2.1"
   }
 }
