@@ -1,31 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Put On Your Bernie Face</title>
+    <meta charset="utf-8" /> 
+    <title>Put On Your Bernie Face!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/tachyons.min.css"/>
     <link rel="stylesheet" type="text/css" href="css/bernie.css">
   </head>
-  <body class="cabin bg-light-gray bernie-blue">
-    <div class="bg-bernie-blue white center pv1 tc mw7-m br2-m mt4-m">
-      <h1 class="f1 fw9 ttc">Put on your Bernie face!</h1>
-      <img class="dn di-m mb4" src="imgs/banner.gif">
-      <div>
-        <a class="f4 fw3 w5 ttu tc link br2 ph3 pv2 mb2 dib white hover-bg-blue bg-orange" href="#0">Play on Facebook</a>
-        <a class="f4 fw3 w5 ttu tc link br2 ph3 pv2 mb2 dib white hover-bg-blue bg-green" href="#play">Play on website</a>
-        </a>
-      </div>
-      <p class="lh-copy f4 f3-m">
-        The game you play by feeling what Bernie is feeling!
-      </p>
+  <body class="cabin bg-white bernie-blue">
+    <div class="bg-bernie-blue white center pv1 tc mw7-l br2-l mt4-l">
+      <div id="app"></div>
     </div>
     <div class="pv2 tc code ma1 f5 tracked-light fw3 mt4 mr2">
-      <a class="link" href="http://telekommunisten.net">
-        <span class="gold i f4 fw9">#<span class="mt2">*</span></span>
-        <span class="dark-red">Telekommunisten</span>
+      <a class="link nowrap" href="http://telekommunisten.net">
+        <span class="gold i f4 fw9">#<span class="mt2 mr1">*</span></span><span class="dark-red">Telekommunisten</span>
       </a>
-      <span class="fw6 dn di-m moon-gray">&mdash;</span>
-      <a class="sans-serif link fw6 bernie-blue" href="#">Gameface&nbsp;Games</a>
+      <span class="fw6 dn di-ns moon-gray">&mdash;</span>
+      <a class="sans-serif link fw6 bernie-blue nowrap" href="#">
+        Gameface Games
+      </a>
     </div>
+    <script>
+      if (location.hostname != 'localhost' && location.protocol != 'https:')
+        location.href = 'https:' + window.location.href.substring(window.location.protocol.length)
+    </script>
+    <script src="js/riot+compiler.min.js"></script>
+    <script>
+    function NotInFacebookFrame() {
+      return top === self;
+    }
+    function ReferrerIsFacebookApp() {
+      if(document.referrer) {
+        return document.referrer.indexOf('apps.facebook.com') != -1;
+      }
+      return false;
+    }
+    if (!NotInFacebookFrame() && ReferrerIsFacebookApp()) {
+      top.location.replace('https://www.facebook.comapp/459401351061135/');
+    }
+    </script>
+    <script data-src="tags/welcome.js" type="riot/tag"></script>
+    <script data-src="tags/game.js" type="riot/tag"></script>
+    <script data-src="tags/face.js" type="riot/tag"></script>
+    <script data-src="tags/player.js" type="riot/tag"></script>
+    <script data-src="tags/countdown.js" type="riot/tag"></script>
+    <script data-src="tags/classifier.js" type="riot/tag"></script>
+    <script data-src="tags/badge.js" type="riot/tag"></script>
+    <script data-src="tags/browser.js" type="riot/tag"></script>
+    <script src="js/scoring.js"></script>
+    <script src="js/slogans.js"></script>
+    <script src="js/adapter.js"></script>
+    <script src="js/clmtrackr/clmtrackr.js"></script>
+    <script src="js/clmtrackr/emotion_classifier.js"></script>
+    <script src="js/clmtrackr/emotionmodel.js"></script>
+    <script src="js/clmtrackr/pmodel.js"></script>
+    <script src="js/canvas-text-wrapper.js"></script>
+    <script src="js/bernieface.js"></script>
   </body>
 </html>
