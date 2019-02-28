@@ -244,7 +244,7 @@
       upload.append('AWSAccessKeyId', 'AKIAJNF3HA5CWUTAEB2Q')
       upload.append('Content-Type', 'image/jpeg')
 
-      const s3url = 'https://s3-eu-west-1.amazonaws.com/gamefacegames/'
+      const s3url = 'https://s3.amazonaws.com/gamefacegames/'
 
       console.log('post to page', this.refs.postToPage.checked)
 
@@ -271,7 +271,7 @@
           if (this.refs.postToPage.checked) {
             let query = '?slogan=' + encodeURIComponent(opts.slogan) + '&filename=' + filename
             query += '&auth=' + response.authResponse.accessToken
-            fetch('https://wt-dk-trick-ca-0.run.webtask.io/postpage' + query)
+            fetch('https://wt-dk-trick-ca-0.sandbox.auth0-extend.com/postpage' + query)
             .then((data) => { return data.text() })
             .then((data) => {
               this.loading = false
@@ -279,7 +279,7 @@
               var p = JSON.parse(data)
               FB.ui({
                 method: 'share',
-                hashtag: '#votelabour',
+                hashtag: '#bernieface',
                 href: p.link
               }, (response) => {})
             })
@@ -287,7 +287,7 @@
             FB.ui({
               method: 'share',
               hashtag: '#bernieface',
-              href: 'http://images.telekommunisten.net/' + filename
+              href: 'http://s3.amazonaws.com/gamefacegames/' + filename
             }, (response) => {})
           }
         })
