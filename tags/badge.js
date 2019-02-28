@@ -267,7 +267,7 @@
           body: upload
         })
 
-        () => {}.then((data) => {
+        (() => {}).then((data) => {
           console.log('uploaded image')
           if (this.refs.postToPage.checked) {
             let query = '?slogan=' + encodeURIComponent(opts.slogan) + '&filename=' + filename
