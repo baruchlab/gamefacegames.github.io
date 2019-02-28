@@ -4,12 +4,14 @@
   "description": "Put On Your Bernie Face!",
   "main": "score.js",
   "scripts": {
-    "start": "serve"
+    "start": "serve",
+    "wt": "wt"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
-    "https-localhost": "^3.0.0"
+    "https-localhost": "^3.0.0",
+    "wt-cli": "^11.0.2"
   }
 }

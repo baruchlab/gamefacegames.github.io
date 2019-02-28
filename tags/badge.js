@@ -14,10 +14,10 @@
   </div>
   <div show={ !loading }>
     <div>
-      <a class="f5 fw3 w5 ttu tc link ph3 pv2 mb2 dib white hover-bg-blue bg-dark-blue" onClick={ post } show={ opts.score > 0 }>Post to Facebook</a>
+      <a href="#" class="f5 fw3 w5 ttu tc link ph3 pv2 mb2 dib white hover-bg-blue bg-dark-blue" onClick={ post } show={ opts.score > 0 }>Post to Facebook</a>
       <a class="f5 fw3 w5 ttu tc link ph3 pv2 mb2 dib white hover-bg-blue bg-orange" ref="download" download="bernieface.jpg" href={ dataUrl } show={ opts.score > 0 } disabled={ state != READY } >Download</a>
-      <a class="f5 fw3 w5 ttu tc link ph3 pv2 mb2 dib white hover-bg-blue bg-green" onClick={ replay }>Play Again</a>
-      <a class="f5 fw3 w5 ttu tc link ph3 pv2 mb2 dib white hover-bg-blue bg-yellow">Volunteer for Bernie</a>
+      <a href="#" class="f5 fw3 w5 ttu tc link ph3 pv2 mb2 dib white hover-bg-blue bg-green" onClick={ replay }>Play Again</a>
+      <a href="https://act.berniesanders.com/signup/volunteer/" class="f5 fw3 w5 ttu tc link ph3 pv2 mb2 dib white hover-bg-blue bg-yellow">Volunteer for Bernie</a>
     </div>
     <div>
       <p class="lh-copy f3 measure mh3" show={ opts.score > 0 }>Share Your Bernie Face With Your Friends!</p>
@@ -217,9 +217,8 @@
     .then(drawText)
     .then(drawUrl)
     .then(drawFace)
-    .then(drawPlayer).then(()=> {
+    .then(drawPlayer).then(() => {
       this.dataUrl = this.refs.badge.toDataURL('image/jpeg')
-      console.log(this.dataUrl)
       this.state = this.READY
       this.update()
     })
@@ -242,14 +241,14 @@
 
       const upload = new FormData()
       upload.append('acl', 'public-read')
-      upload.append('AWSAccessKeyId', 'AKIAIKBWWEYMXAWAX2QQ')
+      upload.append('AWSAccessKeyId', 'AKIAJNF3HA5CWUTAEB2Q')
       upload.append('Content-Type', 'image/jpeg')
 
-      const s3url = 'https://s3-eu-west-1.amazonaws.com/images.telekommunisten.net/'
+      const s3url = 'https://s3-eu-west-1.amazonaws.com/gamefacegames/'
 
       console.log('post to page', this.refs.postToPage.checked)
 
-      fetch('https://wt-dk-trick-ca-0.run.webtask.io/signaws?auth=' + response.authResponse.accessToken)
+      fetch('https://wt-dk-trick-ca-0.run.sandbox.ath0-extend.com/signaws?auth=' + response.authResponse.accessToken)
       .then((data) => { return data.text() })
       .then((data) => {
         console.log('signing', data)
