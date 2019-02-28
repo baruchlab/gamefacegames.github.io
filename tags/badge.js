@@ -15,7 +15,7 @@
   <div show={ !loading }>
     <div>
       <a class="f5 fw3 w5 ttu tc link ph3 pv2 mb2 dib white hover-bg-blue bg-dark-blue" onClick={ post } show={ opts.score > 0 }>Post to Facebook</a>
-      <a href="#" class="f5 fw3 w5 ttu tc link ph3 pv2 mb2 dib white hover-bg-blue bg-orange" ref="download" download="bernieface.jpg" href={ dataUrl } show={ opts.score > 0 } disabled={ state != READY } >Download</a>
+      <a class="f5 fw3 w5 ttu tc link ph3 pv2 mb2 dib white hover-bg-blue bg-orange" ref="download" download="bernieface.jpg" href={ dataUrl } show={ opts.score > 0 } disabled={ state != READY } >Download</a>
       <a class="f5 fw3 w5 ttu tc link ph3 pv2 mb2 dib white hover-bg-blue bg-green" onClick={ replay }>Play Again</a>
       <a class="f5 fw3 w5 ttu tc link ph3 pv2 mb2 dib white hover-bg-blue bg-yellow">Volunteer for Bernie</a>
     </div>
@@ -220,6 +220,8 @@
     .then(drawPlayer).then(()=> {
       this.state = this.READY
       this.dataUrl = this.refs.badge.toDataURL('image/jpeg')
+      console.log(this.dataUrl)
+      this.update()
     })
 
   }
