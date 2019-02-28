@@ -2,7 +2,7 @@
   <canvas class="w-100 mv4" ref="badge" width="800" height="460" show={ opts.score > 0 }></canvas>
   <div show={ opts.score == 0 }>
     <img src="imgs/sandersface.gif">
-    <p class="lh-copy f3 measure center mh3 tl">You only got 0% Bernie. Don&rsquo;t give up! Make sure you have good lighting and try again. Keep your head a bit still.</p>
+    <p class="lh-copy f3 measure mh3 tl">You only got 0% Bernie. Don&rsquo;t give up! Make sure you have good lighting and try again. Keep your head a bit still.</p>
   </div>
   <canvas ref="scratch" width="400" height="300" show={ false }></canvas>
   <div show={ loading }>
@@ -20,7 +20,7 @@
       <a class="f5 fw3 w5 ttu tc link ph3 pv2 mb2 dib white hover-bg-blue bg-yellow">Volunteer for Bernie</a>
     </div>
     <div>
-      <p class="lh-copy f3 measure center mh3" show={ opts.score > 0 }>Share Your Bernie Face With Your Friends!</p>
+      <p class="lh-copy f3 measure mh3" show={ opts.score > 0 }>Share Your Bernie Face With Your Friends!</p>
     </div>
     <div class="f4 mv4" show={ opts.score > 0 }>
         <label class="db">
@@ -33,7 +33,7 @@
         </label>
     </div>
   </div>
-  <p class="lh-copy f3 measure cener mh3 tl" show={ opts.score == 0 }>Common sources of difficulties are low lighting conditions, busy backgrounds, tape over camera, denied camera persions, or other apps or browser windows using your camera.</p>
+  <p class="lh-copy f3 measure mh3 tl" show={ opts.score == 0 }>Common sources of difficulties are low lighting conditions, busy backgrounds, tape over camera, denied camera persions, or other apps or browser windows using your camera. Desktop browsers work much better than mobile, so if you&rsquo;re on your phone, try again when your on your computer.</p>
 
   <style>
     .spinner {
@@ -162,7 +162,7 @@
         const badge = badgeCanvas.getContext('2d')
         badge.font = "32pt 'Cabin', sans-serif"
         badge.fillStyle = 'white'
-        badge.fillText('PUT ON YOUR BERNIE FACE!', 80, 430)
+        badge.fillText('PUT ON YOUR BERNIE FACE!', 130, 430)
         resolve()
       })
     }
@@ -173,7 +173,7 @@
         const badge = badgeCanvas.getContext('2d')
         badge.font = "12pt 'Cabin', sans-serif"
         badge.fillStyle = 'white'
-        badge.fillText('https://telekommunisten.net/bernieface', 230, 455)
+        badge.fillText('https://telekommunisten.net/bernieface', 280, 455)
         resolve()
       })
     }
