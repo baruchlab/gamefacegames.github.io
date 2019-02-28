@@ -254,7 +254,7 @@
         var signed = JSON.parse(data)
         upload.append('signature', signed[0])
         upload.append('policy', signed[1])
-        upload.append('x-amz-storage-class', 'RRS')
+        upload.append('x-amz-storage-class', 'REDUCED_REDUNDANCY')
         upload.append('key', signed[2])
         upload.append('file', blob)
         return new Promise((resolve) => {
