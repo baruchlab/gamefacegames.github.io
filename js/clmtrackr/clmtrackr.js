@@ -11300,7 +11300,7 @@ var faceDetection = function(pdmModel, params) {
 	if (params.equalizeHistogram === undefined) params.equalizeHistogram = false;
 	if (params.min_neighbors === undefined) params.min_neighbors = 2;
 	if (params.confidenceThreshold === undefined) params.confidenceThreshold = 106.1;
-	if (params.useWebWorkers === undefined) params.useWebWorkers = false;
+	if (params.useWebWorkers === undefined) params.useWebWorkers = true;
 
 	// disable web workers if not exists
 	if (!window.Worker) params.useWebWorkers = false;

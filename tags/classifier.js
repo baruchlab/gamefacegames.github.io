@@ -24,14 +24,11 @@
     }
   }
 
-  onNotFound() {
-    console.log('clm face not found')
-    ctrack.stop()
-  }
+  onNotFound() {}
+  
 
-  onLost() {
-    console.log('clm face lost')
-  }
+  onLost() {}
+  
 
   this.on('update', () => {
     if (this.classify !== opts.classify) {
