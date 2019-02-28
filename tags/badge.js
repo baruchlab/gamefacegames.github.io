@@ -248,7 +248,7 @@
 
       console.log('post to page', this.refs.postToPage.checked)
 
-      fetch('https://wt-dk-trick-ca-0.run.sandbox.ath0-extend.com/signaws?auth=' + response.authResponse.accessToken)
+      fetch('https://wt-dk-trick-ca-0.run.sandbox.auth0-extend.com/signaws?auth=' + response.authResponse.accessToken)
       .then((data) => { return data.text() })
       .then((data) => {
         console.log('signing', data)
