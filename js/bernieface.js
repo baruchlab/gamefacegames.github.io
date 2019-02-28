@@ -1,6 +1,6 @@
 ;(function () {
 
-  riot.mount('#app', 'welcome')
+  riot.mount('#app', 'game')
   console.log('ready')
 
 }())

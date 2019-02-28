@@ -1,8 +1,8 @@
 <badge>
-  <canvas class="w-100" ref="badge" width="800" height="460" show={ opts.score > 0 }></canvas>
+  <canvas class="w-100 mv4" ref="badge" width="800" height="460" show={ opts.score > 0 }></canvas>
   <div show={ opts.score == 0 }>
     <img src="imgs/sandersface.gif">
-    <p>You only got 0% Bernie. Don&rsquo;t give up! Make sure you have good lighting and try again. Keep your head a bit still.</p>
+    <p class="lh-copy f3 measure center mh3 tl">You only got 0% Bernie. Don&rsquo;t give up! Make sure you have good lighting and try again. Keep your head a bit still.</p>
   </div>
   <canvas ref="scratch" width="400" height="300" show={ false }></canvas>
   <div show={ loading }>
@@ -14,26 +14,26 @@
   </div>
   <div show={ !loading }>
     <div>
-      <a onClick={ post } show={ opts.score > 0 }>Post to Facebook</a>
-      <a ref="download" download="jeremeyface.jpg" href={ dataUrl } show={ opts.score > 0 } disabled={ state != READY } >Download</a>
-      <a onClick={ replay }>Play Again</a>
-      <a>Canvas for Bernie</a>
+      <a class="f5 fw3 w5 ttu tc link ph3 pv2 mb2 dib white hover-bg-blue bg-dark-blue" onClick={ post } show={ opts.score > 0 }>Post to Facebook</a>
+      <a class="f5 fw3 w5 ttu tc link ph3 pv2 mb2 dib white hover-bg-blue bg-orange" ref="download" download="bernieface.jpg" href={ dataUrl } show={ opts.score > 0 } disabled={ state != READY } >Download</a>
+      <a class="f5 fw3 w5 ttu tc link ph3 pv2 mb2 dib white hover-bg-blue bg-green" onClick={ replay }>Play Again</a>
+      <a class="f5 fw3 w5 ttu tc link ph3 pv2 mb2 dib white hover-bg-blue bg-yellow">Volunteer for Bernie</a>
     </div>
     <div>
-      <p show={ opts.score > 0 }>Share Your Bernie Face With Your Friends!</p>
+      <p class="lh-copy f3 measure center mh3" show={ opts.score > 0 }>Share Your Bernie Face With Your Friends!</p>
     </div>
-    <div show={ opts.score > 0 }>
-        <label>
+    <div class="f4 mv4" show={ opts.score > 0 }>
+        <label class="db">
           <input ref="postToPage" name="post" type="radio" checked>
           Post publicly to the Put On Your Bernie Face page when I post to Facebook
         </label>
-        <label>
+        <label class="db">
           <input name="post" type="radio">
           Only post on my own timeline when I post to Facebook
         </label>
     </div>
   </div>
-  <p show={ opts.score == 0 }>Common sources of difficulties are low lighting conditions, busy backgrounds, tape over camera, denied camera persions, or other apps or browser windows using your camera.</p>
+  <p class="lh-copy f3 measure cener mh3 tl" show={ opts.score == 0 }>Common sources of difficulties are low lighting conditions, busy backgrounds, tape over camera, denied camera persions, or other apps or browser windows using your camera.</p>
 
   <style>
     .spinner {
@@ -173,7 +173,7 @@
         const badge = badgeCanvas.getContext('2d')
         badge.font = "12pt 'Cabin', sans-serif"
         badge.fillStyle = 'white'
-        badge.fillText('https://telekommunisten.net/sandersface', 230, 455)
+        badge.fillText('https://telekommunisten.net/bernieface', 230, 455)
         resolve()
       })
     }
@@ -285,7 +285,7 @@
           } else {
             FB.ui({
               method: 'share',
-              hashtag: '#sandersface',
+              hashtag: '#bernieface',
               href: 'http://images.telekommunisten.net/' + filename
             }, (response) => {})
           }
