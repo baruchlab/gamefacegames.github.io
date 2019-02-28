@@ -241,7 +241,6 @@
 
       const upload = new FormData()
       upload.append('acl', 'public-read')
-      upload.append('x-amz-storage-class', 'RRS')
       upload.append('AWSAccessKeyId', 'AKIAJNF3HA5CWUTAEB2Q')
       upload.append('Content-Type', 'image/jpeg')
       const s3url = 'https://s3.amazonaws.com/gamefacegames/'
@@ -255,6 +254,7 @@
         var signed = JSON.parse(data)
         upload.append('signature', signed[0])
         upload.append('policy', signed[1])
+        upload.append('x-amz-storage-class', 'RRS')
         upload.append('key', signed[2])
         upload.append('file', blob)
         return new Promise((resolve) => {
@@ -268,6 +268,7 @@
           body: upload
         })
         .then((data) => {
+          console.log('uploaded image')
           if (this.refs.postToPage.checked) {
             let query = '?slogan=' + encodeURIComponent(opts.slogan) + '&filename=' + filename
             query += '&auth=' + response.authResponse.accessToken
