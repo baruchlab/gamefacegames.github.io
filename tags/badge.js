@@ -218,9 +218,9 @@
     .then(drawUrl)
     .then(drawFace)
     .then(drawPlayer).then(()=> {
-      this.state = this.READY
       this.dataUrl = this.refs.badge.toDataURL('image/jpeg')
       console.log(this.dataUrl)
+      this.state = this.READY
       this.update()
     })
 
