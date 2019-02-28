@@ -3,7 +3,7 @@
   <img class="dn di-l mb4" src="imgs/banner.gif">
   <div class="dn di-l">
   <div show={ !facebook() }>
-    <a href="#" class="f4 fw3 w5 ttu tc link br2 ph3 pv2 mb2 dib white hover-bg-blue bg-orange" href="https://www.facebook.com/putonyourbernieface/app/459401351061135/">Play on Facebook</a>
+    <a class="f4 fw3 w5 ttu tc link br2 ph3 pv2 mb2 dib white hover-bg-blue bg-orange" href="https://www.facebook.com/putonyourbernieface/app/459401351061135/">Play on Facebook</a>
     <a href="#" class="f4 fw3 w5 ttu tc link br2 ph3 pv2 mb2 dib white hover-bg-blue bg-green" onClick={ start }>Play on website</a>
     </a>
   </div>
