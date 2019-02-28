@@ -241,9 +241,9 @@
 
       const upload = new FormData()
       upload.append('acl', 'public-read')
+      upload.append('x-amz-storage-class', 'REDUCED_REDUNDANCY')
       upload.append('AWSAccessKeyId', 'AKIAJNF3HA5CWUTAEB2Q')
       upload.append('Content-Type', 'image/jpeg')
-      upload.append('x-amz-storage-class', 'REDUCED_REDUNDANCY')
       const s3url = 'https://s3.amazonaws.com/gamefacegames/'
 
       console.log('post to page', this.refs.postToPage.checked)
