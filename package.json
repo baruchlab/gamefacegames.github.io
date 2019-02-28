@@ -4,12 +4,12 @@
   "description": "Put On Your Bernie Face!",
   "main": "score.js",
   "scripts": {
-    "start": "static-server"
+    "start": "serve"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
-    "static-server": "^2.2.1"
+    "https-localhost": "^3.0.0"
   }
 }

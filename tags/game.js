@@ -123,7 +123,7 @@
     this.update()
   }
 
-  this.slogan = 'PUT ON YOUR SANDERS FACE!'
+  this.slogan = 'WHen you feel like this'
   start () {
     this.game = this.GAME_LOADING
     function getRandomInt (min, max) {
@@ -138,6 +138,6 @@
 
   this.on('mount', () => {
     this.game = this.GAME_LOADING
-    //this.start()
+    this.start()
   })
 </game>
