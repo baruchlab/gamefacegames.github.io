@@ -11300,7 +11300,7 @@ var faceDetection = function(pdmModel, params) {
 	if (params.equalizeHistogram === undefined) params.equalizeHistogram = false;
 	if (params.min_neighbors === undefined) params.min_neighbors = 2;
 	if (params.confidenceThreshold === undefined) params.confidenceThreshold = 106.1;
-	if (params.useWebWorkers === undefined) params.useWebWorkers = true;
+	if (params.useWebWorkers === undefined) params.useWebWorkers = false;
 
 	// disable web workers if not exists
 	if (!window.Worker) params.useWebWorkers = false;
@@ -11370,7 +11370,6 @@ var faceDetection = function(pdmModel, params) {
 		var y = candidate.y;
 		var w = candidate.width;
 		var h = candidate.height;
-
 		// var debugCC = document.getElementById('overlay2').getContext('2d')
 		if (model.hints && mosseFilter && left_eye_filter && right_eye_filter && nose_filter) {
 			var noseFilterWidth = w * 4.5/10;
@@ -11627,7 +11626,6 @@ var jsfeat_face = function(parameters) {
 					best.y = (best.y*sc)|0;
 					best.width = (best.width*sc)|0;
 					best.height = (best.height*sc)|0;
-
 					resolve(best);
 				}
 			}

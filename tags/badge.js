@@ -1,5 +1,5 @@
 <badge>
-  <canvas ref="badge" width="800" height="460" show={ opts.score > 0 }></canvas>
+  <canvas class="w-100" ref="badge" width="800" height="460" show={ opts.score > 0 }></canvas>
   <div show={ opts.score == 0 }>
     <img src="imgs/sandersface.gif">
     <p>You only got 0% Bernie. Don&rsquo;t give up! Make sure you have good lighting and try again. Keep your head a bit still.</p>
@@ -17,15 +17,15 @@
       <a onClick={ post } show={ opts.score > 0 }>Post to Facebook</a>
       <a ref="download" download="jeremeyface.jpg" href={ dataUrl } show={ opts.score > 0 } disabled={ state != READY } >Download</a>
       <a onClick={ replay }>Play Again</a>
-      <a>Canvas for Sanders</a>
+      <a>Canvas for Bernie</a>
     </div>
     <div>
-      <p show={ opts.score > 0 }>Share Your Sanders Face With Your Friends!</p>
+      <p show={ opts.score > 0 }>Share Your Bernie Face With Your Friends!</p>
     </div>
     <div show={ opts.score > 0 }>
         <label>
           <input ref="postToPage" name="post" type="radio" checked>
-          Post publicly to the Put On Your Sanders Face page when I post to Facebook
+          Post publicly to the Put On Your Bernie Face page when I post to Facebook
         </label>
         <label>
           <input name="post" type="radio">
@@ -113,7 +113,7 @@
       return new Promise((resolve) => {
         this.state = this.DRAWING
         const badge = badgeCanvas.getContext('2d')
-        badge.fillStyle = '#CC1D1D'
+        badge.fillStyle = '#0070CC'
         badge.fillRect(0,0,800,460)
         resolve()
       })
@@ -129,7 +129,7 @@
       sloganctx.fillStyle = '#FFFFFF'
       console.log('slogan', opts.slogan)
       CanvasTextWrapper(slogan, opts.slogan, {
-        font: "24pt 'Open Sans', sans-serif",
+        font: "24pt 'Cabin', sans-serif",
         sizeToFill: false,
         maxFontSizeToFill: false,
         lineHeight: 2,
@@ -160,9 +160,9 @@
       console.log('draw text')
       return new Promise((resolve) => {
         const badge = badgeCanvas.getContext('2d')
-        badge.font = "32pt 'Open Sans', sans-serif"
+        badge.font = "32pt 'Cabin', sans-serif"
         badge.fillStyle = 'white'
-        badge.fillText('PUT ON YOUR SANDERS FACE!', 80, 430)
+        badge.fillText('PUT ON YOUR BERNIE FACE!', 80, 430)
         resolve()
       })
     }
@@ -171,7 +171,7 @@
       console.log('draw url')
       return new Promise((resolve) => {
         const badge = badgeCanvas.getContext('2d')
-        badge.font = "12pt 'Open Sans', sans-serif"
+        badge.font = "12pt 'Cabin', sans-serif"
         badge.fillStyle = 'white'
         badge.fillText('https://telekommunisten.net/sandersface', 230, 455)
         resolve()
@@ -199,7 +199,7 @@
         playerImg.onload = () => {
           badge.drawImage(playerImg, 0, 90)
           var t = ''.concat(opts.score,'% BERNIE!')
-          badge.font = "20pt 'Open Sans', sans-serif"
+          badge.font = "20pt 'Cabin', sans-serif"
           badge.lineWidth  = 10
           badge.lineJoin = 'round'
           badge.strokeStyle = 'black'

@@ -1,6 +1,5 @@
 <classifier>
   const ctrack = new clm.tracker()
-  console.log('clm init')
   ctrack.init(pModel)
   const ec = new emotionClassifier()
   ec.init(emotionModel)
@@ -19,7 +18,6 @@
   }
 
   onConverge() {
-    console.log('clm converge')
     opts.emotion(this.getEmotion())
     if (opts.stop || opts.classify.tagName === 'CANVAS') {
       ctrack.stop()
@@ -37,7 +35,7 @@
 
   this.on('update', () => {
     if (this.classify !== opts.classify) {
-      console.log('clm update', opts)
+      console.log('clm update', pModel, '//')
       ctrack.reset()
       ctrack.start(opts.classify)
       this.classify = opts.classify

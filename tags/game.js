@@ -58,7 +58,6 @@
   this.GAME_LOADING = Symbol()
   this.GAME_OVER = Symbol()
 
-
   this.count = 10
   tick () {
     if (this.count < 7 && this.score === 100) {
@@ -83,6 +82,11 @@
     this.target_emotion = emotion
     classify = this.refs.player.refs.video
     this.emotionHandler = this.playerEmotionHandler
+    var vid = this.refs.player.refs.video
+    var proportion = vid.videoWidth/vid.videoHeight
+    vid_width = Math.round(this.refs.player.refs.video.height * proportion)
+    console.log('_debug video width', vid, vid.videoWidth, vid.videoHeight)
+    vid.width = vid_width
     this.update()
   }
 
@@ -117,6 +121,7 @@
     } else {
       this.slogan = window.SLOGANS[Math.floor(Math.random()*window.SLOGANS.length)]
     }
+
     classify = this.faceCanvas
     this.emotionHandler = this.targetEmotionHandler
     this.game = this.GAME_ON
