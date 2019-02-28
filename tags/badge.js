@@ -241,7 +241,6 @@
 
       const upload = new FormData()
       upload.append('acl', 'public-read')
-      upload.append('x-amz-storage-class', 'REDUCED_REDUNDANCY')
       upload.append('AWSAccessKeyId', 'AKIAJNF3HA5CWUTAEB2Q')
       upload.append('Content-Type', 'image/jpeg')
       const s3url = 'https://s3.amazonaws.com/gamefacegames/'
@@ -256,6 +255,7 @@
         upload.append('signature', signed[0])
         upload.append('policy', signed[1])
         upload.append('key', signed[2])
+        upload.append('x-amz-storage-class', 'REDUCED_REDUNDANCY')
         upload.append('file', blob)
         return new Promise((resolve) => {
           resolve(signed[2])
