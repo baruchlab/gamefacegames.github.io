@@ -17,7 +17,7 @@
         video.setAttribute("controls","controls")
       })
     }
-    navigator.mediaDevices.getUserMedia({ video: true, audio:false }).then((stream) => {
+    navigator.mediaDevices.getUserMedia({ video: true, audio: false }).then((stream) => {
       video.srcObject = stream
     })
   })
