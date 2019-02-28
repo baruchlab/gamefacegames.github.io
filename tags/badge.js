@@ -256,6 +256,7 @@
         upload.append('policy', signed[1])
         upload.append('key', signed[2])
         upload.append('file', blob)
+        upload.append('x-amz-storage-class', 'RRS')
         return new Promise((resolve) => {
           resolve(signed[2])
         })
