@@ -1,6 +1,6 @@
 <badge>
   <canvas class="w-100 mv4" ref="badge" width="800" height="460" show={ opts.score > 0 }></canvas>
-  <div show={ opts.score == 0 }>
+  <div class="mv3 show={ opts.score == 0 }>
     <img src="imgs/sandersface.gif">
     <p class="lh-copy f3 measure mh3 tl">You only got 0% Bernie. Don&rsquo;t give up! Make sure you have good lighting and try again. Keep your head a bit still.</p>
   </div>
