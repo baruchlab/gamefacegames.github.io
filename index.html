@@ -8,6 +8,10 @@
     <link rel="stylesheet" type="text/css" href="css/bernie.css">
   </head>
   <body class="cabin bg-white bernie-blue">
+    <script>
+      if (location.hostname != 'localhost' && location.protocol != 'https:')
+        location.href = 'https:' + window.location.href.substring(window.location.protocol.length)
+    </script>
     <div class="bg-bernie-blue white center pv1 tc mw7-l br2-l mt4-l">
       <div id="app"></div>
     </div>

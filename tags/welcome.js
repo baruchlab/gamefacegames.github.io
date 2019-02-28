@@ -20,7 +20,7 @@
 by trying to convey the same emotions as Bernie is expressing in a picture. The
 game works with emotional classifcation, so it doesn't matter if you look like
 Bernie.  Regardless of your age, gender or heritage, you can score 100% bernie
-if can feel what Benie is feeling.
+if can feel what Bernie is feeling.
     </p>
     <p class="dn-ns">
     <a href="#" class="f4 fw3 w5 ttu tc link br2 ph3 pv2 mb2 dib white hover-bg-blue bg-green" onClick={ start }>Play Now!</a>
