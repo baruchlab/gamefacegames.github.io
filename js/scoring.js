@@ -59,7 +59,7 @@
       m = "Good"
       console.log('good', JSON.stringify(player_emotion))
     } else {
-      if (!m) m = "Try to feel what Bernie is feeling!"
+      if (!m) m = "Try to feel what Jagmeet is feeling!"
     }
     //console.log('scoring')
     //console.log('target', t)
