@@ -4,7 +4,7 @@ window.SLOGANS = [
   'When democracy is in crisis and oligarchy looms',
   'When our health care system is in shambles',
   'When our educational system is in crisis',
-  'When the strugle for real change requires engaging Americans from all walks of life'
+  'When the strugle for real change requires engaging Canadians from all walks of life'
 ]
 }())
 
