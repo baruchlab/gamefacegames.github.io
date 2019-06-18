@@ -14,7 +14,7 @@ module.exports = function (context, cb) {
       if (!err && res.statusCode === 200) {
         graph.setAccessToken(token)
         graph.post(pageid + '/photos', {
-          caption: slogan + ': Put On Your Bernie Face! Share and promote #bernieface @putonyourbernieface VOLUNTEER FOR BERNIE https://act.berniesanders.com/signup/volunteer/ ',
+          caption: slogan + ': Put On Your Jagmeet Face! Share and promote #jagmeetface @putonyourjagmeetface VOLUNTEER FOR JAGMEET https://www.ndp.ca/volunteer ',
           url: 'http://s3.amazonaws.com/gamefacegames/' + filename
         }, function (err, res) {
           if (!err) {
